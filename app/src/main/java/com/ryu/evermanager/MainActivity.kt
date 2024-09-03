@@ -35,11 +35,38 @@ class MainActivity : AppCompatActivity() {
             initComponents()
             kernelName.text = getString(R.string.kernel_name) + " " + getKernelName()
             kernelVersion.text = getString(R.string.kernel_version) + " " + getKernelVersion()
+            managerVersion.text = getString(R.string.manager_version) + " " + getAppVersion()
             checkKernelAndProceed()
         } else {
             Toast.makeText(this, getString(R.string.non_rooted_device), Toast.LENGTH_LONG).show()
             setContentView(R.layout.activity_non_rooted_device)
         }
+    }
+
+    private fun isDeviceRooted(): Boolean {
+        val rootBeer = RootBeer(this)
+        return rootBeer.isRooted
+    }
+
+    private fun checkKernelAndProceed() {
+        if (isKernelSupported()) {
+            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.verified)
+            val stub: ViewStub = findViewById(R.id.supportedFeatureStub)
+            stub.inflate()
+        } else {
+            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.not_verified)
+            val stub: ViewStub = findViewById(R.id.notSupportedFeatureStub)
+            stub.inflate()
+        }
+    }
+
+    private fun isKernelSupported(): Boolean {
+        val kernelFile = File("/proc/evergreen-kernel")
+        if (kernelFile.exists()) {
+            val kernelFlag = kernelFile.readText().trim()
+            return kernelFlag == "evergreen_kernel_verified"
+        }
+        return false
     }
 
     private fun getKernelName(): String {
@@ -72,29 +99,13 @@ class MainActivity : AppCompatActivity() {
         return kernelVersion
     }
 
-    private fun isDeviceRooted(): Boolean {
-        val rootBeer = RootBeer(this)
-        return rootBeer.isRooted
-    }
-
-    private fun checkKernelAndProceed() {
-        if (isKernelSupported()) {
-            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.verified)
-            val stub: ViewStub = findViewById(R.id.supportedFeatureStub)
-            stub.inflate()
-        } else {
-            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.not_verified)
-            val stub: ViewStub = findViewById(R.id.notSupportedFeatureStub)
-            stub.inflate()
+    private fun getAppVersion(): String {
+        return try {
+            val packageInfo = packageManager.getPackageInfo(packageName, 0)
+            packageInfo.versionName
+        } catch (e: Exception) {
+            e.printStackTrace()
+            "Unknown"
         }
-    }
-
-    private fun isKernelSupported(): Boolean {
-        val kernelFile = File("/proc/evergreen-kernel")
-        if (kernelFile.exists()) {
-            val kernelFlag = kernelFile.readText().trim()
-            return kernelFlag == "evergreen_kernel_verified"
-        }
-        return false
     }
 }
