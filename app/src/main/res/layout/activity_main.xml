@@ -67,7 +67,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/bannerCardView"
         android:inflatedId="@+id/supportedFeatureView"
-        android:layout="@layout/activity_everg_fast_charge" />
+        android:layout="@layout/activity_evergreen_fast_charge" />
 
     <!-- ViewStub for not supported features -->
     <ViewStub

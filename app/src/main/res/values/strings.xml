@@ -7,10 +7,6 @@
     <string name="verified">✅ Supported"</string>
     <string name="not_verified">❌ Not supported"</string>
     <string name="non_rooted_device">This device is not rooted\nThe app cannot run without root access</string>
-    <string name="kernel_not_supported">Kernel not supported for this features</string>
-    <string name="root_required_title">Root required"</string>
-    <string name="root_required_message">Root permission is required to run this app. Give root permission?"</string>
-    <string name="root_access_allowed">Ok</string>
-    <string name="root_access_denied">Cancel</string>
+    <string name="kernel_not_supported">Kernel not supported for this features\nUse Evergreen kernel</string>
     <string name="root_access_denied_desc">Root access denied, the app cannot run without root access</string>
 </resources>
