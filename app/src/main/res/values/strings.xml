@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">Evergreen Kernel Manager</string>
-    <string name="kernel_name">Kernel Name: </string>
-    <string name="kernel_version">Kernel Version: </string>
-    <string name="manager_verification">Manager Verification: </string>
-    <string name="manager_version">Manager Version: </string>
+    <string name="kernel_name">Kernel name: </string>
+    <string name="kernel_version">Kernel version: </string>
+    <string name="manager_verification">Manager verification: </string>
+    <string name="manager_version">Manager version: </string>
     <string name="verified">✅ Supported"</string>
-    <string name="not_supported">❌ Not Supported"</string>
+    <string name="not_verified">❌ Not supported"</string>
     <string name="non_rooted_device">This device is not rooted\nThe app cannot run without root access</string>
+    <string name="kernel_not_supported">Kernel not supported for this features</string>
     <string name="root_required_title">Root required"</string>
     <string name="root_required_message">Root permission is required to run this app. Give root permission?"</string>
     <string name="root_access_allowed">Ok</string>

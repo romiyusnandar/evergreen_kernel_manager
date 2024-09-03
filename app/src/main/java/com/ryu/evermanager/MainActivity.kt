@@ -1,13 +1,12 @@
 package com.ryu.evermanager
 
 import android.os.Bundle
+import android.view.ViewStub
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.scottyab.rootbeer.RootBeer
-import com.jaredrummler.android.shell.Shell
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             checkKernelAndProceed()
         } else {
             Toast.makeText(this, getString(R.string.non_rooted_device), Toast.LENGTH_LONG).show()
-            setContentView(R.layout.activity_kernel_not_supported)
+            setContentView(R.layout.activity_non_rooted_device)
         }
     }
 
@@ -81,8 +80,12 @@ class MainActivity : AppCompatActivity() {
     private fun checkKernelAndProceed() {
         if (isKernelSupported()) {
             managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.verified)
+            val stub: ViewStub = findViewById(R.id.supportedFeatureStub)
+            stub.inflate()
         } else {
-            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.not_supported)
+            managerVerification.text = getString(R.string.manager_verification) + " " + getString(R.string.not_verified)
+            val stub: ViewStub = findViewById(R.id.notSupportedFeatureStub)
+            stub.inflate()
         }
     }
 

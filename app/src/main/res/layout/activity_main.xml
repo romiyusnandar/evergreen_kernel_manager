@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:cardBackgroundColor="@color/card_color"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="10dp"
         app:cardElevation="8dp"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/kernelNameTextView"
@@ -29,8 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/kernel_name"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/kernelVersionTextView"
@@ -38,8 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/kernel_version"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/managerVerificationTextView"
@@ -47,8 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/manager_verification"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/managerVersionTextView"
@@ -56,10 +53,30 @@
                 android:layout_height="wrap_content"
                 android:text="@string/manager_version"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <!-- ViewStub for supported features -->
+    <ViewStub
+        android:id="@+id/supportedFeatureStub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/bannerCardView"
+        android:inflatedId="@+id/supportedFeatureView"
+        android:layout="@layout/activity_everg_fast_charge" />
+
+    <!-- ViewStub for not supported features -->
+    <ViewStub
+        android:id="@+id/notSupportedFeatureStub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/bannerCardView"
+        android:inflatedId="@+id/notSupportedFeatureView"
+        android:layout="@layout/activity_kernel_not_supported" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
