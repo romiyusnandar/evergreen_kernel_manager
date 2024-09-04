@@ -10,7 +10,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -87,6 +88,7 @@
             android:layout_marginTop="16dp"
             android:inflatedId="@+id/notSupportedFeatureView"
             android:layout="@layout/activity_kernel_not_supported" />
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
