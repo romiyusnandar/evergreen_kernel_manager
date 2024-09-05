@@ -61,12 +61,12 @@ class MainActivity : AppCompatActivity() {
         if (isKernelSupported()) {
             managerVerification.text = getString(R.string.verified_title)
             managerVerificationDesc.text = getString(R.string.verified_desc)
-            statusImage.setImageDrawable(getDrawable(R.mipmap.ic_success))
+            statusImage.setImageDrawable(getDrawable(R.drawable.check))
             findViewById<ViewStub>(R.id.supportedFeatureStub).inflate()
         } else {
             managerVerification.text = getString(R.string.not_verified_title)
             managerVerificationDesc.text = getString(R.string.not_verified_desc)
-            statusImage.setImageDrawable(getDrawable(R.mipmap.ic_failed))
+            statusImage.setImageDrawable(getDrawable(R.drawable.cross))
             findViewById<ViewStub>(R.id.notSupportedFeatureStub).inflate()
         }
     }

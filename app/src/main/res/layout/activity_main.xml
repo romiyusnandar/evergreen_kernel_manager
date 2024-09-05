@@ -31,7 +31,7 @@
                 android:id="@+id/settingsIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@mipmap/ic_setting"
+                android:src="@drawable/settings"
                 android:layout_gravity="end"
                 android:paddingEnd="16dp"
                 android:contentDescription="@string/action_settings" />
@@ -65,7 +65,7 @@
                     android:layout_margin="15dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@mipmap/ic_failed"/>
+                    android:src="@drawable/cross"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
