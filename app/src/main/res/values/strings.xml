@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EKM</string>
+    <string name="fragment_home_title">Home</string>
+    <string name="fragment_manager_title">Manager</string>
+    <string name="fragment_setting_title">Setting</string>
+
+    <string name="non_rooted_device">Non rooted device detected</string>
+    <string name="grant_root_access">Grant root access</string>
+    <string name="root_access_granted">Root access granted</string>
+    <string name="root_access_denied">Root access denied</string>
+</resources>
