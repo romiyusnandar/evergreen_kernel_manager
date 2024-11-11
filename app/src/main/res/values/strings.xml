@@ -8,4 +8,7 @@
     <string name="grant_root_access">Grant root access</string>
     <string name="root_access_granted">Root access granted</string>
     <string name="root_access_denied">Root access denied</string>
+
+    <string name="evergreen_kernel_supported">Evergreen kernel supported</string>
+    <string name="evergreen_kernel_not_supported">Evergreen kernel not supported</string>
 </resources>
