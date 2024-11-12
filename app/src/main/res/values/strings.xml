@@ -4,11 +4,20 @@
     <string name="fragment_manager_title">Manager</string>
     <string name="fragment_setting_title">Setting</string>
 
+    <!-- Nonroot activity -->
     <string name="non_rooted_device">Non rooted device detected</string>
     <string name="grant_root_access">Grant root access</string>
     <string name="root_access_granted">Root access granted</string>
     <string name="root_access_denied">Root access denied</string>
 
-    <string name="evergreen_kernel_supported">Evergreen kernel supported</string>
-    <string name="evergreen_kernel_not_supported">Evergreen kernel not supported</string>
+    <!-- Fragment home -->
+    <string name="evergreen_kernel_supported">Evergreen Kernel Supported</string>
+    <string name="evergreen_kernel_not_supported">Evergreen Kernel Not Supported</string>
+    <string name="enjoy_the_features">Enjoy the features 🚀</string>
+    <string name="kernel_title">Kernel</string>
+    <string name="fingerprint_title">Fingerprint</string>
+    <string name="selinux_status">SELinux</string>
+    <string name="unknown">Unknown</string>
+    <string name="support_us_title">Support Us</string>
+    <string name="support_us_summary">We always keep our source open and free. you can give us donation as a form of appreciation and support. a little donation from you really helps us</string>
 </resources>
