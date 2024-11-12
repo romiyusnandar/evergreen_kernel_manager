@@ -20,4 +20,8 @@
     <string name="unknown">Unknown</string>
     <string name="support_us_title">Support Us</string>
     <string name="support_us_summary">We always keep our source open and free. you can give us donation as a form of appreciation and support. a little donation from you really helps us</string>
+    <string name="restart_action">Reboot Option</string>
+    <string name="restart_system">Reboot System</string>
+    <string name="restart_recovery">Reboot to Recovery</string>
+    <string name="restart_cancel">Cancel</string>
 </resources>
